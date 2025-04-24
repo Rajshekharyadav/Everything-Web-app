@@ -146,14 +146,14 @@ export default function AuthForm({ type, onSubmit }: AuthFormProps) {
           {type === 'signin' ? (
             <>
               Don't have an account?{' '}
-              <a href="/auth/signup" className="text-primary-600 hover:text-primary-700">
+              <a href="/auth?mode=signup" className="text-primary-600 hover:text-primary-700">
                 Sign up
               </a>
             </>
           ) : (
             <>
               Already have an account?{' '}
-              <a href="/auth/signin" className="text-primary-600 hover:text-primary-700">
+              <a href="/auth?mode=signin" className="text-primary-600 hover:text-primary-700">
                 Sign in
               </a>
             </>

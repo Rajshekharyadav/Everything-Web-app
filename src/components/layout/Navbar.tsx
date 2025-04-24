@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaBars, FaTimes, FaShoppingCart, FaUser, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes, FaShoppingCart, FaUser, FaMoon, FaSun, FaLayerGroup } from 'react-icons/fa';
 import { useTheme } from '../providers/ThemeProvider';
 
 const Navbar = () => {
@@ -28,6 +28,13 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <Link
+                href="/services"
+                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              >
+                <FaLayerGroup className="mr-2" />
+                All Services
+              </Link>
               {services.map((service) => (
                 <Link
                   key={service.name}
@@ -79,6 +86,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="sm:hidden">
           <div className="pt-2 pb-3 space-y-1">
+            <Link
+              href="/services"
+              className="block pl-3 pr-4 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+            >
+              <FaLayerGroup className="inline mr-2" />
+              All Services
+            </Link>
             {services.map((service) => (
               <Link
                 key={service.name}

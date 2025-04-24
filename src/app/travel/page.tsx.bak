@@ -14,6 +14,8 @@ import {
 } from 'react-icons/fa';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useToast } from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
 
 // Enhanced travel services with more details
 const travelServices = [
@@ -1953,6 +1955,8 @@ export default function TravelPage() {
     );
   };
 
+  const router = useRouter();
+  const toast = useToast();
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
